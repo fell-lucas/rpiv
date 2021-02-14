@@ -1,4 +1,4 @@
-package com.unipampa.imobiliaria;
+package com.unipampa.crud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

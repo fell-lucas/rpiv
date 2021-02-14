@@ -1,4 +1,4 @@
-package com.unipampa.imobiliaria.model;
+package com.unipampa.crud.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PROPERTY_REGISTRATION")
+@Table(name = "tbl_property_registration")
 public class Property {
 
 	@Id
@@ -16,14 +16,14 @@ public class Property {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idProperty;
 
-	@Column(name = "area")
+	@Column(name = "area_property")
 	private float area;
 
 	@Column(name = "neighborhood")
 	private String neighborhood;
 
 	@Column(name = "cod_address")
-	private Long codAddress;
+	private String codAddress;
 
 	@Column(name = "city")
 	private String city;
@@ -40,14 +40,14 @@ public class Property {
 	@Column(name = "state")
 	private String state;
 
-	@Column(name = "status")
+	@Column(name = "price")
 	private double price;
 
 	public Property() {
 
 	}
 
-	public Property(Long idProperty, float area, String neighborhood, Long codAddress, String city, String description,
+	public Property(Long idProperty, float area, String neighborhood, String codAddress, String city, String description,
 			String adress, String state, double price) {
 		this.idProperty = idProperty;
 		this.area = area;
@@ -72,7 +72,7 @@ public class Property {
 		return neighborhood;
 	}
 
-	public Long getCodAddress() {
+	public String getCodAddress() {
 		return codAddress;
 	}
 
@@ -108,7 +108,7 @@ public class Property {
 		this.neighborhood = neighborhood;
 	}
 
-	public void setCodAddress(Long codAddress) {
+	public void setCodAddress(String codAddress) {
 		this.codAddress = codAddress;
 	}
 
